@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: Inter, system-ui, sans-serif;
+    }
+    body {
+      @apply bg-zinc-900;
+    }
+    
+    @layer utilities {
+      
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    }
+}
