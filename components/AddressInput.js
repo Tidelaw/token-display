@@ -10,7 +10,7 @@ export default function AddressInput() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const response = await axios.post("/api/events", { address: address });
+    const response = await axios.post("/api/balance", { address: address });
 
     setSubmit(true)
 
