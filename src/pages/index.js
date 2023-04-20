@@ -13,7 +13,7 @@ export default function Home() {
       
       <div className="flex container flex-col min-w-full justify-center ">
 
-        <div className='flex justify-center text-7xl font-bold text-orange p-16'>Helius Token Balance</div>
+        <div className='flex justify-center text-8xl font-black text-orange p-16 text-transparent bg-clip-text font-sans bg-gradient-to-r from-orange to-light-orange'>TOKEN SCAN</div>
 
         <AddressInput></AddressInput>
 

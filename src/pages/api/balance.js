@@ -36,8 +36,8 @@ export default async function handler(req, res) {
       let balance = await getBalance(wallet)
       let balanceMetadata = await getMetadata(balance);
 
-      await fs.writeFile('balance.json', JSON.stringify(balance), 'utf8', ((err)=>console.log(err)));
-      await fs.writeFile('balance-metadata.json', JSON.stringify(balanceMetadata), 'utf8', ((err)=>console.log(err)));
+      // await fs.writeFile('balance.json', JSON.stringify(balance), 'utf8', ((err)=>console.log(err)));
+      // await fs.writeFile('balance-metadata.json', JSON.stringify(balanceMetadata), 'utf8', ((err)=>console.log(err)));
 
       res.status(200).json(balanceMetadata)
     };
