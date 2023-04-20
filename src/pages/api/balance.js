@@ -24,6 +24,7 @@ async function getMetadata(tokens) {
     mintAccounts = query.data;
   }
 
+  mintAccounts.map((e,i)=>e.amount = tokens[i].amount);
   return mintAccounts
 }
 

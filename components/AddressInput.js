@@ -31,18 +31,16 @@ export default function AddressInput() {
   return (
     <div className='flex h-full flex-col justify-center items-center xl:p-16 p-4 pt-8 space-y-24'>
 
-      <form onSubmit={handleSubmit} className="flex row-start-1 col-span-2 p-2 items-center justify-center">
+      <form onSubmit={handleSubmit} className="flex row-start-1 col-span-2 items-center justify-center">
         <input
           type="text"
           value={address}
-          className="rounded-l-lg w-full xl:w-[28.3rem] outline-0 p-4 bg-zinc-800 text-white"
+          className="flex px-4 py-2 rounded-l-lg w-full xl:w-[28.3rem] outline-0 bg-zinc-800 text-white"
           onChange={(e) => setAddress(e.target.value)}
         />
-        <button className='p-4 rounded-r-lg bg-orange font-bold text-zinc-800 duration-200 hover:bg-light-orange cursor-pointer' type="submit">
-          <Image className="flex rounded-lg" alt="mag" src="/mag.svg" width="24" height="24"></Image>
+        <button className='flex p-2 rounded-r-lg bg-zinc-800 font-bold text-white duration-200 cursor-pointer' type="submit">
+          <svg className='flex w-6 p-1 rounded-lg hover:bg-zinc-700 duration-200' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="m15.97 17.031c-1.479 1.238-3.384 1.985-5.461 1.985-4.697 0-8.509-3.812-8.509-8.508s3.812-8.508 8.509-8.508c4.695 0 8.508 3.812 8.508 8.508 0 2.078-.747 3.984-1.985 5.461l4.749 4.75c.146.146.219.338.219.531 0 .587-.537.75-.75.75-.192 0-.384-.073-.531-.22zm-5.461-13.53c-3.868 0-7.007 3.14-7.007 7.007s3.139 7.007 7.007 7.007c3.866 0 7.007-3.14 7.007-7.007s-3.141-7.007-7.007-7.007z"></path></svg>
         </button>
-
-
       </form>
 
       <React.Fragment>{(
