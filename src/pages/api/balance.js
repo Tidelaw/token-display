@@ -10,19 +10,13 @@ async function getBalance(req) {
 async function getMetadata(tokens) {
 
   let url = `https://api.helius.xyz/v0/tokens/metadata?api-key=${process.env.HELIUS_KEY}`
-  let mintAccounts = [], queriedTokens = tokens.map((e)=>e.mint);
-  if (tokens.length > 100) {
-    for (let i = 0; i < Math.ceil(tokens.length / 100); i++) {
-      let batch = queriedTokens.slice(0, 100)
-      queriedTokens = queriedTokens.slice(100, queriedTokens.length)
-      let query = await axios.post(url, { mintAccounts: batch })
-      mintAccounts = mintAccounts.concat(query.data)
-    }
-  }
-  else {
-    let query = await axios.post(url, { mintAccounts: tokens })
-    mintAccounts = query.data;
-  }
+  let mintAccounts = []
+  
+  let queryTokens = tokens.map((e)=>e.mint)
+  queryTokens = queryTokens.slice(0,99)
+
+  let query = await axios.post(url, { mintAccounts: queryTokens })
+  mintAccounts = query.data;
 
   mintAccounts.map((e,i)=>e.amount = tokens[i].amount);
   return mintAccounts
