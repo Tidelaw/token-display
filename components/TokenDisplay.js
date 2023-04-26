@@ -11,7 +11,7 @@ export default function AddressInput({ tokens }) {
             if (tokens[i].onChainData.tokenStandard == "Fungible" || tokens[i].onChainData.tokenStandard == "FungibleAsset") {
                 console.log(tokens[i], FTs)
                 FTs.push(
-                    <div key={tokens[i].mint} className="flex flex-row w-3/4 text-white border border-1 border-neutral-800 px-4 py-4 rounded-lg hover:bg-neutral-800 duration-200">
+                    <div key={tokens[i].mint} className="flex flex-row w-full text-white border border-1 border-neutral-800 px-4 py-4 rounded-lg hover:bg-neutral-800 duration-200">
                         <a className="w-full" target="_blank" rel="noreferrer" href={"https://xray.helius.xyz/token/" + tokens[i].mint}>
                             <div className="flex w-full items-center justify-between">
 
@@ -72,15 +72,15 @@ export default function AddressInput({ tokens }) {
     return (
         tokens
             ? (
-                <div className="flex flex-row">
+                <div className="flex flex-col space-y-8 xl:space-y-0 xl:flex-row ">
 
-                    <div className="flex w-2/5 h-max flex-col">
+                    <div className="flex w-full xl:w-2/5 h-max flex-col">
                         <div className="flex w-full h-full rounded-lg flex-col items-center gap-4" key="FTs">
                             {FTs}
                         </div>
                     </div>
 
-                    <div className="flex w-3/5 h-max flex-col">
+                    <div className="flex w-full xl:w-3/5 h-max flex-col">
                         <div key="NFTS" className='flex w-full h-max rounded-lg flex-row flex-wrap items-center justify-center gap-4'>
                             {NFTs}
                         </div>

@@ -29,9 +29,9 @@ export default function AddressInput() {
 
 
   return (
-    <div className='flex h-full flex-col justify-center items-center xl:p-16 p-4 pt-8 space-y-24'>
+    <div className='flex w-full h-full flex-col justify-center items-center xl:p-16 p-4 pt-8 space-y-24'>
 
-      <form onSubmit={handleSubmit} className="flex row-start-1 col-span-2 items-center justify-center">
+      <form onSubmit={handleSubmit} className="flex w-full items-center justify-center">
         <input
           type="text"
           value={address}
