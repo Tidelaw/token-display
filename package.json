@@ -1,5 +1,5 @@
 {
-  "name": "webhook-display",
+  "name": "token-display",
   "version": "0.1.0",
   "private": true,
   "scripts": {
