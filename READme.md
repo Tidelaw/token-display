@@ -1,5 +1,9 @@
 # **Token Balance and Metadata Helius API Showcase**
 
+## **[Walkthrough](https://tidelaw.notion.site/Token-Display-bdd1f7e0a7d44178b1a11797839af2db?pvs=4)**
+
+<br>
+
 In this project walkthrough, we are going to go through how you can create a dAPP UI that allows users to track the inventory of any wallet using Helius's API.
 
 **Sneak Peek:**
@@ -283,5 +287,3 @@ Thats it! A simple display of all tokens for any given wallet using minimal code
 
 - Occasional issues with API calls, error code 400 unsure why
 - Queries for wallets with a large number of tokens will fail as Vercel has a timeout on API calls over 10 seconds, therefore a cap of 100 tokens is put in place to bypass this.
-- DIV array not clearing when new wallet is input
-- Scam NFTs are causing Chrome to view site as dangerous as there is a link to the scam's website
