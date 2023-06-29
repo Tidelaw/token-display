@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       
-      <div className="flex container flex-col min-w-full justify-center ">
+      <div className="flex container flex-col min-w-full max-w-screen overflow-hidden justify-center ">
 
         {/* <div className='flex justify-center text-7xl font-black text-orange p-16'></div> */}
 
