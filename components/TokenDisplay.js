@@ -35,7 +35,7 @@ export default function AddressInput({ tokens }) {
                         <a target="_blank" rel="noreferrer" href={"https://xray.helius.xyz/token/" + tokens[i].id}>
 
                             <div className='flex'>
-                                <img className='flex w-64 rounded-lg' src={tokens[i].content.files[0].cdn_uri}></img>
+                                <img className='flex w-64 rounded-lg' src={tokens[i].content.files[0].uri}></img>
                             </div>
 
                             <div className='flex flex-row justify-between p-4 h-18 text-md'>
